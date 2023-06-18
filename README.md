@@ -12,6 +12,6 @@ STM32G431CBT6<br>
 3. 寄存器工程（待完成）
 
 ## PCB图片
-![正面](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/beimian.png)<br>
+![正面](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/zhengmian.png)<br>
 ![反面](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/beimian.png)<br>
 <br>
