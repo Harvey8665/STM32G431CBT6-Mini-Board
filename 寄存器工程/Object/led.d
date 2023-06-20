@@ -1,0 +1,9 @@
+..\object\led.o: ..\Drivers\led.c
+..\object\led.o: ..\Drivers\led.h
+..\object\led.o: D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h
+..\object\led.o: D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h
+..\object\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\object\led.o: D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+..\object\led.o: D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+..\object\led.o: D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h
+..\object\led.o: D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h

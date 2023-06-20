@@ -1,8 +1,9 @@
 --cpu=Cortex-M4.fp.sp
 "..\object\main.o"
 "..\object\sys.o"
+"..\object\led.o"
 "..\object\startup_stm32g431xx.o"
---strict --scatter "..\Object\temple.sct"
+--library_type=microlib --strict --scatter "..\Object\temple.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "..\Object\temple.map" -o ..\Object\temple.axf

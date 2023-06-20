@@ -1,11 +1,6 @@
 #include "sys.h"
 
-void SystemInit(void)
-{
-	
-}
-
-
+//SYSCLK_170MHz V1.0 2023/6/20
 uint16_t SYSCLK_170MHz(void)
 {
 	#if HSE1  //Íâ²¿¾§ÕñÎª25MHz

@@ -8,3 +8,4 @@
 ..\object\main.o: system_stm32g4xx.h
 ..\object\main.o: ..\Drivers\sys.h
 ..\object\main.o: D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h
+..\object\main.o: ..\Drivers\led.h

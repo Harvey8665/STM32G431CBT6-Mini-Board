@@ -18,7 +18,7 @@ typedef enum
     LOCKED   = 0x01U
 }LockTypeDef;
 
-void SystemInit(void);
+uint16_t SYSCLK_170MHz(void);
 
 #endif
 

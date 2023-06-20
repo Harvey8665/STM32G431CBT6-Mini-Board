@@ -1,6 +1,6 @@
 Dependencies for Project 'temple', Target 'Harvey': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x64912192)(--gnu -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\main.o --omf_browse ..\object\main.crf --depend ..\object\main.d)
+F (.\main.c)(0x649136BC)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\main.o --omf_browse ..\object\main.crf --depend ..\object\main.d)
 I (stm32g431xx.h)(0x64537241)
 I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559CEB9A)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -8,10 +8,11 @@ I (D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
 I (D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
 I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559CEB9A)
 I (system_stm32g4xx.h)(0x64537241)
-I (..\Drivers\sys.h)(0x6491224C)
+I (..\Drivers\sys.h)(0x64912FEE)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
-F (..\Drivers\sys.c)(0x649122A5)(--gnu -c --cpu Cortex-M4.fp.sp -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\sys.o --omf_browse ..\object\sys.crf --depend ..\object\sys.d)
-I (..\Drivers\sys.h)(0x6491224C)
+I (..\Drivers\led.h)(0x64913687)
+F (..\Drivers\sys.c)(0x649136F8)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\sys.o --omf_browse ..\object\sys.crf --depend ..\object\sys.d)
+I (..\Drivers\sys.h)(0x64912FEE)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
 I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559CEB9A)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -19,4 +20,13 @@ I (D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
 I (D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
 I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559CEB9A)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C21C0)
-F (.\startup_stm32g431xx.s)(0x603C21C0)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 538" --pd "STM32G431xx SETA 1"--list ..\object\startup_stm32g431xx.lst --xref -o ..\object\startup_stm32g431xx.o --depend ..\object\startup_stm32g431xx.d)
+F (..\Drivers\led.c)(0x649136F8)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\led.o --omf_browse ..\object\led.crf --depend ..\object\led.d)
+I (..\Drivers\led.h)(0x64913687)
+I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559CEB9A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559CEB9A)
+I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C21C0)
+F (.\startup_stm32g431xx.s)(0x64912FBF)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 538" --pd "STM32G431xx SETA 1"--list ..\object\startup_stm32g431xx.lst --xref -o ..\object\startup_stm32g431xx.o --depend ..\object\startup_stm32g431xx.d)
