@@ -16,6 +16,9 @@ STM32G431CBT6<br>
 ## STM32G431CBT6简介
 ![简介](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/stm32g431cb.jpg)<br>
 
+## 引脚分布
+
+
 ## HAL库工程模板
 默认功能：LED1每500ms闪烁一次<br>
 有待优化的地方：可更换为HAL_GPIO_ToglePin函数，但是本工程加入该函数会提示未定义该函数（目前暂无解决办法）<br>
