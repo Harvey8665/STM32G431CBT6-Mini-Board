@@ -33,13 +33,14 @@ Removing Unused input sections from the image.
 
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
     Removing sys.o(.rev16_text), (4 bytes).
     Removing sys.o(.revsh_text), (4 bytes).
     Removing led.o(.rev16_text), (4 bytes).
     Removing led.o(.revsh_text), (4 bytes).
     Removing startup_stm32g431xx.o(HEAP), (512 bytes).
 
-7 unused section(s) (total 536 bytes) removed from the image.
+8 unused section(s) (total 542 bytes) removed from the image.
 
 ==============================================================================
 
@@ -228,34 +229,34 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001d8   Data   RO          109    RESET               startup_stm32g431xx.o
-    0x080001d8   0x080001d8   0x00000000   Code   RO          114  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001d8   0x080001d8   0x00000004   Code   RO          117    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001dc   0x080001dc   0x00000004   Code   RO          120    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001e0   0x080001e0   0x00000000   Code   RO          122    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001e0   0x080001e0   0x00000000   Code   RO          124    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001e0   0x080001e0   0x00000008   Code   RO          125    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001e8   0x080001e8   0x00000004   Code   RO          132    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001ec   0x080001ec   0x00000000   Code   RO          127    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001ec   0x080001ec   0x00000000   Code   RO          129    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001ec   0x080001ec   0x00000004   Code   RO          118    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x080001f0   0x080001f0   0x0000001c   Code   RO          110    .text               startup_stm32g431xx.o
-    0x0800020c   0x0800020c   0x00000024   Code   RO          133    .text               mc_w.l(init.o)
-    0x08000230   0x08000230   0x000000e4   Code   RO           55    i.SYSCLK_170MHz     sys.o
-    0x08000314   0x08000314   0x0000000e   Code   RO          137    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08000322   0x08000322   0x00000002   Code   RO          138    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000324   0x08000324   0x0000000e   Code   RO          139    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000000   0x08000000   0x000001d8   Data   RO          125    RESET               startup_stm32g431xx.o
+    0x080001d8   0x080001d8   0x00000000   Code   RO          130  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001d8   0x080001d8   0x00000004   Code   RO          133    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001dc   0x080001dc   0x00000004   Code   RO          136    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001e0   0x080001e0   0x00000000   Code   RO          138    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001e0   0x080001e0   0x00000000   Code   RO          140    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001e0   0x080001e0   0x00000008   Code   RO          141    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001e8   0x080001e8   0x00000004   Code   RO          148    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001ec   0x080001ec   0x00000000   Code   RO          143    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001ec   0x080001ec   0x00000000   Code   RO          145    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001ec   0x080001ec   0x00000004   Code   RO          134    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001f0   0x080001f0   0x0000001c   Code   RO          126    .text               startup_stm32g431xx.o
+    0x0800020c   0x0800020c   0x00000024   Code   RO          149    .text               mc_w.l(init.o)
+    0x08000230   0x08000230   0x000000e4   Code   RO           65    i.SYSCLK_170MHz     sys.o
+    0x08000314   0x08000314   0x0000000e   Code   RO          153    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000322   0x08000322   0x00000002   Code   RO          154    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000324   0x08000324   0x0000000e   Code   RO          155    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08000332   0x08000332   0x00000002   PAD
-    0x08000334   0x08000334   0x00000070   Code   RO           89    i.led_init          led.o
-    0x080003a4   0x080003a4   0x00000018   Code   RO            3    i.main              main.o
-    0x080003bc   0x080003bc   0x00000010   Data   RO          135    Region$$Table       anon$$obj.o
+    0x08000334   0x08000334   0x00000070   Code   RO          105    i.led_init          led.o
+    0x080003a4   0x080003a4   0x00000018   Code   RO            4    i.main              main.o
+    0x080003bc   0x080003bc   0x00000010   Data   RO          151    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080003cc, Size: 0x00000400, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000        -       0x00000400   Zero   RW          107    STACK               startup_stm32g431xx.o
+    0x20000000        -       0x00000400   Zero   RW          123    STACK               startup_stm32g431xx.o
 
 
 ==============================================================================
