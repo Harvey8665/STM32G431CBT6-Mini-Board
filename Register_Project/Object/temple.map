@@ -6,6 +6,12 @@ Section Cross References
 
     main.o(i.main) refers to sys.o(i.SYSCLK_170MHz) for SYSCLK_170MHz
     main.o(i.main) refers to led.o(i.led_init) for led_init
+    main.o(i.main) refers to delay.o(i.delay_init) for delay_init
+    main.o(i.main) refers to delay.o(i.delay_ms) for delay_ms
+    delay.o(i.delay_init) refers to delay.o(.data) for .data
+    delay.o(i.delay_ms) refers to delay.o(i.delay_us) for delay_us
+    delay.o(i.delay_s) refers to delay.o(i.delay_ms) for delay_ms
+    delay.o(i.delay_us) refers to delay.o(.data) for .data
     startup_stm32g431xx.o(RESET) refers to startup_stm32g431xx.o(STACK) for __initial_sp
     startup_stm32g431xx.o(RESET) refers to startup_stm32g431xx.o(.text) for Reset_Handler
     startup_stm32g431xx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
@@ -38,9 +44,12 @@ Removing Unused input sections from the image.
     Removing sys.o(.revsh_text), (4 bytes).
     Removing led.o(.rev16_text), (4 bytes).
     Removing led.o(.revsh_text), (4 bytes).
+    Removing delay.o(.rev16_text), (4 bytes).
+    Removing delay.o(.revsh_text), (4 bytes).
+    Removing delay.o(i.delay_s), (10 bytes).
     Removing startup_stm32g431xx.o(HEAP), (512 bytes).
 
-8 unused section(s) (total 542 bytes) removed from the image.
+11 unused section(s) (total 560 bytes) removed from the image.
 
 ==============================================================================
 
@@ -51,22 +60,24 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ..\Drivers\delay.c                       0x00000000   Number         0  delay.o ABSOLUTE
     ..\Drivers\led.c                         0x00000000   Number         0  led.o ABSOLUTE
     ..\Drivers\sys.c                         0x00000000   Number         0  sys.o ABSOLUTE
+    ..\\Drivers\\delay.c                     0x00000000   Number         0  delay.o ABSOLUTE
     ..\\Drivers\\led.c                       0x00000000   Number         0  led.o ABSOLUTE
     ..\\Drivers\\sys.c                       0x00000000   Number         0  sys.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
@@ -94,9 +105,14 @@ Image Symbol Table
     i.__scatterload_copy                     0x08000314   Section       14  handlers.o(i.__scatterload_copy)
     i.__scatterload_null                     0x08000322   Section        2  handlers.o(i.__scatterload_null)
     i.__scatterload_zeroinit                 0x08000324   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.led_init                               0x08000334   Section        0  led.o(i.led_init)
-    i.main                                   0x080003a4   Section        0  main.o(i.main)
-    STACK                                    0x20000000   Section     1024  startup_stm32g431xx.o(STACK)
+    i.delay_init                             0x08000334   Section        0  delay.o(i.delay_init)
+    i.delay_ms                               0x0800034c   Section        0  delay.o(i.delay_ms)
+    i.delay_us                               0x08000388   Section        0  delay.o(i.delay_us)
+    i.led_init                               0x080003bc   Section        0  led.o(i.led_init)
+    i.main                                   0x0800042c   Section        0  main.o(i.main)
+    .data                                    0x20000000   Section        4  delay.o(.data)
+    fac_us                                   0x20000000   Data           4  delay.o(.data)
+    STACK                                    0x20000008   Section     1024  startup_stm32g431xx.o(STACK)
 
     Global Symbols
 
@@ -209,11 +225,14 @@ Image Symbol Table
     __scatterload_copy                       0x08000315   Thumb Code    14  handlers.o(i.__scatterload_copy)
     __scatterload_null                       0x08000323   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08000325   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    led_init                                 0x08000335   Thumb Code   104  led.o(i.led_init)
-    main                                     0x080003a5   Thumb Code    18  main.o(i.main)
-    Region$$Table$$Base                      0x080003bc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080003cc   Number         0  anon$$obj.o(Region$$Table)
-    __initial_sp                             0x20000400   Data           0  startup_stm32g431xx.o(STACK)
+    delay_init                               0x08000335   Thumb Code    20  delay.o(i.delay_init)
+    delay_ms                                 0x0800034d   Thumb Code    56  delay.o(i.delay_ms)
+    delay_us                                 0x08000389   Thumb Code    46  delay.o(i.delay_us)
+    led_init                                 0x080003bd   Thumb Code   104  led.o(i.led_init)
+    main                                     0x0800042d   Thumb Code    46  main.o(i.main)
+    Region$$Table$$Base                      0x08000460   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000480   Number         0  anon$$obj.o(Region$$Table)
+    __initial_sp                             0x20000408   Data           0  startup_stm32g431xx.o(STACK)
 
 
 
@@ -223,40 +242,45 @@ Memory Map of the image
 
   Image Entry point : 0x080001d9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000003cc, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000484, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000003cc, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000480, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001d8   Data   RO          125    RESET               startup_stm32g431xx.o
-    0x080001d8   0x080001d8   0x00000000   Code   RO          130  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001d8   0x080001d8   0x00000004   Code   RO          133    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001dc   0x080001dc   0x00000004   Code   RO          136    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001e0   0x080001e0   0x00000000   Code   RO          138    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001e0   0x080001e0   0x00000000   Code   RO          140    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001e0   0x080001e0   0x00000008   Code   RO          141    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001e8   0x080001e8   0x00000004   Code   RO          148    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001ec   0x080001ec   0x00000000   Code   RO          143    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001ec   0x080001ec   0x00000000   Code   RO          145    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001ec   0x080001ec   0x00000004   Code   RO          134    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x080001f0   0x080001f0   0x0000001c   Code   RO          126    .text               startup_stm32g431xx.o
-    0x0800020c   0x0800020c   0x00000024   Code   RO          149    .text               mc_w.l(init.o)
+    0x08000000   0x08000000   0x000001d8   Data   RO          165    RESET               startup_stm32g431xx.o
+    0x080001d8   0x080001d8   0x00000000   Code   RO          170  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001d8   0x080001d8   0x00000004   Code   RO          173    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001dc   0x080001dc   0x00000004   Code   RO          176    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001e0   0x080001e0   0x00000000   Code   RO          178    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001e0   0x080001e0   0x00000000   Code   RO          180    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001e0   0x080001e0   0x00000008   Code   RO          181    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001e8   0x080001e8   0x00000004   Code   RO          188    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001ec   0x080001ec   0x00000000   Code   RO          183    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001ec   0x080001ec   0x00000000   Code   RO          185    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001ec   0x080001ec   0x00000004   Code   RO          174    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001f0   0x080001f0   0x0000001c   Code   RO          166    .text               startup_stm32g431xx.o
+    0x0800020c   0x0800020c   0x00000024   Code   RO          189    .text               mc_w.l(init.o)
     0x08000230   0x08000230   0x000000e4   Code   RO           65    i.SYSCLK_170MHz     sys.o
-    0x08000314   0x08000314   0x0000000e   Code   RO          153    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08000322   0x08000322   0x00000002   Code   RO          154    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000324   0x08000324   0x0000000e   Code   RO          155    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000314   0x08000314   0x0000000e   Code   RO          193    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000322   0x08000322   0x00000002   Code   RO          194    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000324   0x08000324   0x0000000e   Code   RO          195    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x08000332   0x08000332   0x00000002   PAD
-    0x08000334   0x08000334   0x00000070   Code   RO          105    i.led_init          led.o
-    0x080003a4   0x080003a4   0x00000018   Code   RO            4    i.main              main.o
-    0x080003bc   0x080003bc   0x00000010   Data   RO          151    Region$$Table       anon$$obj.o
+    0x08000334   0x08000334   0x00000018   Code   RO          125    i.delay_init        delay.o
+    0x0800034c   0x0800034c   0x0000003c   Code   RO          126    i.delay_ms          delay.o
+    0x08000388   0x08000388   0x00000034   Code   RO          128    i.delay_us          delay.o
+    0x080003bc   0x080003bc   0x00000070   Code   RO          105    i.led_init          led.o
+    0x0800042c   0x0800042c   0x00000034   Code   RO            4    i.main              main.o
+    0x08000460   0x08000460   0x00000020   Data   RO          191    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080003cc, Size: 0x00000400, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000480, Size: 0x00000408, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000        -       0x00000400   Zero   RW          123    STACK               startup_stm32g431xx.o
+    0x20000000   0x08000480   0x00000004   Data   RW          129    .data               delay.o
+    0x20000004   0x08000484   0x00000004   PAD
+    0x20000008        -       0x00000400   Zero   RW          163    STACK               startup_stm32g431xx.o
 
 
 ==============================================================================
@@ -266,15 +290,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
+       136         14          0          4          0       1859   delay.o
        112          8          0          0          0        503   led.o
-        24          6          0          0          0       5023   main.o
+        52          6          0          0          0       5043   main.o
         28          4        472          0       1024        832   startup_stm32g431xx.o
        228         12          0          0          0        888   sys.o
 
     ----------------------------------------------------------------------
-       392         30        488          0       1024       7246   Object Totals
-         0          0         16          0          0          0   (incl. Generated)
-         0          0          0          0          0          0   (incl. Padding)
+       556         44        504          4       1028       9125   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -312,15 +337,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       484         46        488          0       1024       7518   Grand Totals
-       484         46        488          0       1024       7518   ELF Image Totals
-       484         46        488          0          0          0   ROM Totals
+       648         60        504          4       1028       9097   Grand Totals
+       648         60        504          4       1028       9097   ELF Image Totals
+       648         60        504          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  972 (   0.95kB)
-    Total RW  Size (RW Data + ZI Data)              1024 (   1.00kB)
-    Total ROM Size (Code + RO Data + RW Data)        972 (   0.95kB)
+    Total RO  Size (Code + RO Data)                 1152 (   1.13kB)
+    Total RW  Size (RW Data + ZI Data)              1032 (   1.01kB)
+    Total ROM Size (Code + RO Data + RW Data)       1156 (   1.13kB)
 
 ==============================================================================
 

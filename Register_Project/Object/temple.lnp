@@ -2,6 +2,7 @@
 "..\object\main.o"
 "..\object\sys.o"
 "..\object\led.o"
+"..\object\delay.o"
 "..\object\startup_stm32g431xx.o"
 --library_type=microlib --strict --scatter "..\Object\temple.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
