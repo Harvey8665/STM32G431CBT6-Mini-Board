@@ -17,7 +17,8 @@
 3. 寄存器工程模板（Register_Project文件夹）
 
 ## 适用芯片
-STM32G431CBT6<br>
+STM32G431CBT6（硬件软件均支持）<br>
+STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件支持，软件需要重新建工程）<br>
 ``` 注意：理论上支持其他LQPF48封装的STM32G4系列芯片，但未经验证。```
 <br>
 
