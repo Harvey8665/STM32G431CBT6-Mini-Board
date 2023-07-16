@@ -25,7 +25,7 @@ STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件�
 <br>
 
 ## 注意事项
-### 一、使用LCD屏幕前需要做的工作
+### 一、使用LCD屏幕前需要做的工作(HAL库)
 由于LCD屏幕占用资源过多，在主程序中已将相关设置移除，如果需要重新使用LCD，则需要做以下工作。<br>
 由于图片占用空间较多，故已移除了显示图片的相关内容，如需恢复，请按步骤5恢复
 #### 1、将驱动文件.c添加到project中
@@ -70,7 +70,7 @@ STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件�
 #include "Text.h"
 //#include "Dis_Picture.h"  //如需显示图片，请取消这行代码的注释
 ```
-### 二、I2C协议的OLED使用硬件I2C驱动的配置
+### 二、I2C协议的OLED使用硬件I2C驱动的配置(HAL库)
 #### 1、将驱动文件`oled.c`添加到project中
 #### 2、设置硬件I2C
 按下图方式设置硬件I2C，设置完成后点击`GENERATE CODE`生成代码<br>
