@@ -1,7 +1,9 @@
 # STM32G431CBT6-Mini-Board
 ## 更新说明
+### 2023/7/27 19：30
+将寄存器工程修改为ARM Compiler Version 6编译<br>
 ### 2023/7/16 14：30
-更新HAL库的屏幕驱动程序
+更新HAL库的屏幕驱动程序<br>
 ### 2023/7/7 14：16
 1、优化寄存器版本工程<br>
 2、新增delay.c、delay.其中包含延时函数<br>
@@ -9,7 +11,7 @@
 1、优化HAL库版本工程<br>
 2、去除本地路径中的中文<br>
 3、解决了CubeMX生成代码时报错的问题<br>
-4、将HAL库工程修改为ARM Compiler Version 6编译
+4、将HAL库工程修改为ARM Compiler Version 6编译<br>
 ### 2023/6/22 15：27
 更新第一个完整版本。<br>
 
@@ -116,7 +118,7 @@ CubeMX生成工程时如果提示以下错误，点击OK即可完成（但此时
 2、上电后LED闪烁（每500ms变换一次电平）<br>
 3、包含微秒、毫秒、秒延时函数<br>
 ```2023年6月22日更新：已验证完成，可以正常使用```<br>
-默认编译软件：MDK5.38 AC5<br>
+默认编译软件：MDK5.38 AC6<br>
 
 ## PCB图片
 ![正面](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/zhengmian.png)<br>

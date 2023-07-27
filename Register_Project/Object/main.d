@@ -1,13 +1,12 @@
-..\object\main.o: main.c
-..\object\main.o: stm32g431xx.h
-..\object\main.o: core_cm4.h
-..\object\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-..\object\main.o: core_cmInstr.h
-..\object\main.o: cmsis_armcc.h
-..\object\main.o: core_cmFunc.h
-..\object\main.o: core_cmSimd.h
-..\object\main.o: system_stm32g4xx.h
-..\object\main.o: ..\Drivers\sys.h
-..\object\main.o: D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h
-..\object\main.o: ..\Drivers\led.h
-..\object\main.o: ..\Drivers\delay.h
+../object/main.o: main.c stm32g431xx.h \
+  D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\Keil_v5\ARM\CMSIS\Include\cmsis_version.h \
+  D:\Keil_v5\ARM\CMSIS\Include\cmsis_compiler.h \
+  D:\Keil_v5\ARM\CMSIS\Include\cmsis_armclang.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\Keil_v5\ARM\CMSIS\Include\mpu_armv7.h system_stm32g4xx.h \
+  ..\Drivers\sys.h \
+  D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h \
+  ..\Drivers\led.h ..\Drivers\delay.h

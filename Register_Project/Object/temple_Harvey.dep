@@ -1,43 +1,54 @@
 Dependencies for Project 'temple', Target 'Harvey': (DO NOT MODIFY !)
-CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\main.c)(0x64A7AD4E)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\main.o --omf_browse ..\object\main.crf --depend ..\object\main.d)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\main.c)(0x64A7AD4E)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers-ID:/Keil_v5/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-ID:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ../object/main.o -MD)
 I (stm32g431xx.h)(0x64537241)
-I (core_cm4.h)(0x5CF60042)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
-I (core_cmInstr.h)(0x5CF60042)
-I (cmsis_armcc.h)(0x626F4ADE)
-I (core_cmFunc.h)(0x5CF60042)
-I (core_cmSimd.h)(0x5E30D0E0)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_version.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_compiler.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_armclang.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\mpu_armv7.h)(0x64537246)
 I (system_stm32g4xx.h)(0x603C21C0)
 I (..\Drivers\sys.h)(0x64912FEE)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
 I (..\Drivers\led.h)(0x64913687)
 I (..\Drivers\delay.h)(0x64A7A93E)
-F (..\Drivers\sys.c)(0x649136F8)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\sys.o --omf_browse ..\object\sys.crf --depend ..\object\sys.d)
+F (..\Drivers\sys.c)(0x649136F8)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers-ID:/Keil_v5/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-ID:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ../object/sys.o -MD)
 I (..\Drivers\sys.h)(0x64912FEE)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559CEB9A)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_version.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_compiler.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_armclang.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\mpu_armv7.h)(0x64537246)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C21C0)
-F (..\Drivers\led.c)(0x649154A0)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\led.o --omf_browse ..\object\led.crf --depend ..\object\led.d)
+F (..\Drivers\led.c)(0x649154A0)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers-ID:/Keil_v5/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-ID:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ../object/led.o -MD)
 I (..\Drivers\led.h)(0x64913687)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559CEB9A)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_version.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_compiler.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_armclang.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\mpu_armv7.h)(0x64537246)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C21C0)
-F (..\Drivers\delay.c)(0x64A7AD2B)(--gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\Drivers-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ..\object\delay.o --omf_browse ..\object\delay.crf --depend ..\object\delay.d)
+F (..\Drivers\delay.c)(0x64A7AD2B)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Drivers-ID:/Keil_v5/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-ID:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="538" -DSTM32G431xx -DHSE1-o ../object/delay.o -MD)
 I (..\Drivers\delay.h)(0x64A7A93E)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h)(0x603C21C0)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x559CEB9A)
-I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h)(0x559CEB9A)
+I (D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_version.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_compiler.h)(0x64537246)
+I (D:\Keil_v5\ARM\CMSIS\Include\cmsis_armclang.h)(0x64537246)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
+I (D:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
+I (D:\Keil_v5\ARM\CMSIS\Include\mpu_armv7.h)(0x64537246)
 I (D:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C21C0)
-F (.\startup_stm32g431xx.s)(0x64912FBF)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-ID:\Keil_v5\Keil\STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 538" --pd "STM32G431xx SETA 1"--list ..\object\startup_stm32g431xx.lst --xref -o ..\object\startup_stm32g431xx.o --depend ..\object\startup_stm32g431xx.d)
+F (.\startup_stm32g431xx.s)(0x64912FBF)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-ID:/Keil_v5/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-ID:/Keil_v5/ARM/CMSIS/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"STM32G431xx SETA 1"-o ../object/startup_stm32g431xx.o)
