@@ -16,9 +16,11 @@
 更新第一个完整版本。<br>
 
 ## 本工程包含的内容
-1. 原理图及PCB文件
-2. HAL库工程模板（HAL_Project文件夹）
-3. 寄存器工程模板（Register_Project文件夹）
+1. 原理图<br>
+2. HAL库工程模板（HAL_Project文件夹）<br>
+3. 寄存器工程模板（Register_Project文件夹）<br>
+4. PCB文件请到立创开源硬件平台[
+STM32G431CBT6最小系统板](https://oshwhub.com/dc123456/stm32g431cbt6-zui-xiao-xi-tong-ban)查看<br>
 
 ## 适用芯片
 STM32G431CBT6（硬件软件均支持）<br>
@@ -120,7 +122,3 @@ CubeMX生成工程时如果提示以下错误，点击OK即可完成（但此时
 ```2023年6月22日更新：已验证完成，可以正常使用```<br>
 默认编译软件：MDK5.38 AC6<br>
 
-## PCB图片
-![正面](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/zhengmian.png)<br>
-![反面](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/beimian.png)<br>
-<br>
