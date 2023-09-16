@@ -36,16 +36,16 @@ STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件�
 由于图片占用空间较多，故已移除了显示图片的相关内容，如需恢复，请按步骤5恢复
 #### 1、将驱动文件.c添加到project中
 如下图所示，将以下c文件添加到project中。<br>
-![C文件添加到project中](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/project.png)<br>
+![C文件添加到project中](./picture/project.png)<br>
 `Dis_Picture.c`包含了显示图片的函数，`Picture.c`包含了图片信息，如果没用到这两个文件，建议不用添加到项目，以免占用过多的flash<br>
 #### 2、设置硬件SPI2
 按照下面三张图设置SPI2。<br>
-![SPI2设置1](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/spi21.png)<br>
-![SPI2设置2](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/spi22.png)<br>
-![SPI2设置3](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/spi23.png)<br>
+![SPI2设置1](./picture/spi21.png)<br>
+![SPI2设置2](./picture/spi22.png)<br>
+![SPI2设置3](./picture/spi23.png)<br>
 #### 3、设置其他GPIO引脚
 如下图所示，初始化PB11、PB12、PB14引脚。<br>
-![GPIO设置](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/gpio.png)<br>
+![GPIO设置](./picture/gpio.png)<br>
 设置完成后点击“GENERATE CODE”生成代码<br>
 #### 4、取消掉以下代码的注释
 将引用头文件、初始化lcd的代码取消注释。<br>
@@ -80,8 +80,8 @@ STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件�
 #### 1、将驱动文件`oled.c`添加到project中
 #### 2、设置硬件I2C
 按下图方式设置硬件I2C，设置完成后点击`GENERATE CODE`生成代码<br>
-![I2C设置1](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/i2c31.png)<br>
-![I2C设置2](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/i2c32.png)<br>
+![I2C设置1](./picture/i2c31.png)<br>
+![I2C设置2](./picture/i2c32.png)<br>
 #### 3、在main.c中添加代码
 在main.c中添加以下代码，其中`OLED_Init`函数已经包含了0x78和0x7A地址的初始化<br>
 `注意：使用/* */注释的内容仅用于定位代码所在的位置，不要修改这部分注释`<br>
@@ -106,7 +106,7 @@ STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件�
 ```
 
 ## STM32G431CBT6简介
-![简介](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/stm32g431cb.jpg)<br>
+![简介](./picture/stm32g431cb.jpg)<br>
 
 ## HAL库工程模板
 默认功能：LED1每500ms闪烁一次<br>
@@ -114,7 +114,7 @@ STM32G431C6、STM32G431C8、STM32G474CB、STM32G474CC、STM32G474CE（仅硬件�
 ```2023年6月22日更新：已验证完成，可以正常使用```<br>
 在使用CubeMX生成时，会提示存在错误，这是因为包含了本地文件夹路径包含了中文（2023/06/25 已修改）。<br>
 CubeMX生成工程时如果提示以下错误，点击OK即可完成（但此时使用AC6编译可能会报错）。<br>
-![CubeMX报错](https://github.com/Harvey8665/STM32G431CBT6-Mini-Board/blob/master/picture/Cube_MX_Error.png)<br>
+![CubeMX报错](./picture/Cube_MX_Error.png)<br>
 默认编译软件：MDK5.38 AC6<br>
 
 ## 寄存器工程模板
